@@ -33,9 +33,22 @@ npx @skill4agent/mcp-server
   "mcpServers": {
     "skill4agent": {
       "command": "npx",
+      "args": ["-y", "@skill4agent/mcp-server"]
+    }
+  }
+}
+```
+
+如需使用自定义 API 端点，可添加 `env` 配置：
+
+```json
+{
+  "mcpServers": {
+    "skill4agent": {
+      "command": "npx",
       "args": ["-y", "@skill4agent/mcp-server"],
       "env": {
-        "SKILL4AGENT_API_URL": "https://skill4agent.com/api/mcp"
+        "SKILL4AGENT_API_URL": "https://your-custom-domain.com/api/mcp"
       }
     }
   }

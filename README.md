@@ -33,9 +33,22 @@ Add the following to your Claude Desktop configuration file:
   "mcpServers": {
     "skill4agent": {
       "command": "npx",
+      "args": ["-y", "@skill4agent/mcp-server"]
+    }
+  }
+}
+```
+
+To use a custom API endpoint, add the `env` configuration:
+
+```json
+{
+  "mcpServers": {
+    "skill4agent": {
+      "command": "npx",
       "args": ["-y", "@skill4agent/mcp-server"],
       "env": {
-        "SKILL4AGENT_API_URL": "https://skill4agent.com/api/mcp"
+        "SKILL4AGENT_API_URL": "https://your-custom-domain.com/api/mcp"
       }
     }
   }
